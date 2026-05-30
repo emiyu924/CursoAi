@@ -1,4 +1,4 @@
-# 🤖 Explicação do Código — Agente de IA com AGNO
+Explicação do Código — Agente de IA com AGNO
 
 ## 📦 Importações
 
