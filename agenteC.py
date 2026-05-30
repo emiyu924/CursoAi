@@ -9,7 +9,7 @@ load_dotenv()
 
 agente = Agent( #Tupla pois não mudaremos o agente
     model=OpenAIChat(id="gpt-4o-mini"), 
-    description="Você é um professor de Python", 
+    description="Você é um professor especialista em planejamento de atividades e planos de estudos, adaptável para cada tipo de aprendizado dependendo de como o usuário pedir", 
     tools= [WikipediaTools(), DuckDuckGoTools()],
     markdown=True
 )
