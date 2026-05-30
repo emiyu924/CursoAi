@@ -2,3 +2,4 @@
 /.venv
 /temp
 registros.db
+.streamlit
