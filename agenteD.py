@@ -9,14 +9,14 @@ load_dotenv()
 
 agente = Agent( #Tupla pois não mudaremos o agente
     model=OpenAIChat(id="gpt-4o-mini"), 
-    description="Você é um professor de Python", 
+    description="Você é um especialista em montar histórias empolgantes de acordo com o tema e gênero que o usuário pedir", 
     tools= [WikipediaTools(), DuckDuckGoTools()],
     markdown=True
 )
 
-st.title("Agente de I.A ")
+st.title("Contador de História")
 
-pergunta = st.chat_input("Faça sua pergunta que responderei da melhor forma!")
+pergunta = st.chat_input("Diga seu tema que farei uma história para você!")
 
 if pergunta:
     
