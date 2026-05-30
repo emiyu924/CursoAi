@@ -1,0 +1,34 @@
+from agno.agent import Agent
+from agno.models.openai import OpenAIChat
+from agno.tools.duckduckgo import DuckDuckGoTools
+from agno.tools.tavily import TavilyTools
+from agno.db.sqlite import SqliteDb
+from dotenv import load_dotenv
+
+#todos os agentes necessitam da chave API, e a função load_dotenv faz a leitura do arquivo no .env
+load_dotenv()
+
+bancoDados = SqliteDb(db_file="temp/registros.db")
+
+agente = Agent(
+    #define modelo do meu agente 
+    model=OpenAIChat(id="gpt-4o-mini"),
+    description="você me responde em inglês",
+    add_history_to_context=True,
+    db= bancoDados,
+    session_id="0cc1b0a5-10fa-4751-b9f3-faf08d96e71b",
+    num_history_runs=10,
+    tools= [DuckDuckGoTools(), TavilyTools],
+    markdown=True
+)
+
+
+while True:
+    pergunta = input("Digite a sua pergunta: ")
+    if pergunta.lower() in ['exit', 'sair', 'quit', 'cancelar', 'finalizar']:
+        print("Encerrando agente.... Bom filho sempre volta para casa! 👀")
+        break
+    else:
+     agente.print_response(pergunta)
+     
+    
