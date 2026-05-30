@@ -23,5 +23,6 @@ if pergunta:
     with st.chat_message("user"):
         st.markdown(pergunta)
         with st.chat_message("assistant"):
-            resposta = agente.run(pergunta)
-            st.markdown(resposta.content)
+            with st.spinner("Agente processando..."):
+                resposta = agente.run(pergunta)
+                st.markdown(resposta.content)
