@@ -14,7 +14,7 @@ agente = Agent( #Tupla pois não mudaremos o agente
     markdown=True
 )
 
-st.title("Contador de História")
+st.title("Contador de História ")
 
 pergunta = st.chat_input("Diga seu tema que farei uma história para você!")
 

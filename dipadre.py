@@ -23,12 +23,12 @@ st.markdown("**Faça a pesquisa e concorra a uma pizza grátis!**")
 nome = st.text_input("Digite o seu nome:")
 cidade = st.text_input("Digite a sua cidade:")
 saborEscolhido = st.selectbox("Qual o seu sabor favorito da casa?", ["Margherita", "Quatro queijos", "Portuguesa", "Calabresa", "Frango Catupiry", "Brigadeiro", "Banana nevada"])
-opcaoFinal = st.checkbox("Ao clicar aqui você Verificou as informações e confirma o sabor escolhido")
+opcaoFinal = st.checkbox("Ao clicar aqui você verificou as informações e confirma o sabor escolhido")
 
 
 if st.button("Enviar Pesquisa"):
     if nome and cidade and saborEscolhido and opcaoFinal:
-        st.success(f"Obrigada {nome} por participar da sua pesquisa! sua cidade é {cidade} você escolheu o sabor {saborEscolhido}, uma perfeita escolha!.")
+        st.success(f"Obrigada {nome} por participar da pesquisa! sua cidade é {cidade} você escolheu o sabor {saborEscolhido}, uma perfeita escolha!.")
         
     else:
-        st.error("Ops! Algo está errado, verifique novamente se todos os dados da pesquisa foram preenchidos corretamente")
+        st.error("Ops! Algo está errado, verifique novamente se todos os dados da pesquisa foram preenchidos corretamente") 
