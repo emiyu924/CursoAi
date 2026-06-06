@@ -7,4 +7,5 @@ dados = rq.get(url)
 
 resposta = dados.json()
 
+
 print(f"o seu usuário mora na {resposta['logradouro']} no bairro {resposta['bairro']} no estado de {resposta['estado']} na região {resposta['regiao']} ")
