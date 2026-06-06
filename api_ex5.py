@@ -17,4 +17,4 @@ def get_moedas():
     except:
         return("Não foi possivel realizar a conversão de valores")
     
-print(get_moedas())
+print(get_moedas()) #Teste
